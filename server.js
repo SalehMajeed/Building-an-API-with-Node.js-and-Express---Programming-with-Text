@@ -1,17 +1,13 @@
 const express = require('express');
+const modules = require('./functions_module');
 
 const app = express();
-const server = app.listen(3000, listening);
-
-function listening() {
-	console.log('done');
-}
+const server = app.listen(3000, modules.listening);
 
 app.use(express.static('website'));
 
-app.get('/search/:data', cb);
+app.get('/search/:data', modules.cb);
 
-function cb(request, response) {
-	const data = request.params;
-	response.send(`you searched for ${data.data}`);
-}
+app.get('/add/:word/:score?', modules.add_word);
+
+app.get('/search%20word/:word', modules.search);
