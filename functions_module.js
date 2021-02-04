@@ -32,4 +32,8 @@ function search(request, response) {
 	}
 }
 
-module.exports = { cb, listening, add_word, search };
+function get_all(request, response) {
+	response.send(dictionary);
+}
+
+module.exports = { cb, listening, add_word, search, get_all };

@@ -11,3 +11,5 @@ app.get('/search/:data', modules.cb);
 app.get('/add/:word/:score?', modules.add_word);
 
 app.get('/search%20word/:word', modules.search);
+
+app.get('/all', modules.get_all);
