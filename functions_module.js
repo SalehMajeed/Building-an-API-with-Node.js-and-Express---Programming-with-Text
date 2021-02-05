@@ -1,7 +1,5 @@
-const { json } = require('body-parser');
-const { request, response } = require('express');
 const fs = require('fs');
-const dictionary = JSON.parse(fs.readFileSync('dictionary.json'));
+const dictionary = JSON.parse(fs.readFileSync('./dictionary.json'));
 
 function cb(request, response) {
 	const data = request.params;
@@ -13,7 +11,7 @@ function listening() {
 }
 
 function add_word(request, response) {
-	if (!request.params.score) {
+	if (request.params.score == null) {
 		request.params.score = 0;
 	}
 	dictionary[request.params.word] = +request.params.score;

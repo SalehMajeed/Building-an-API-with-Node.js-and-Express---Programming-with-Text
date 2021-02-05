@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			input {
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			Word: <input type="text" id="word" /><br />
+			Score: <input type="text" id="score" /><br />
+			<button id="submit">Add Word</button>
+		</p>
+
+		<p>
+            <h2>Analyze</h2>
+
+            <textarea id="txt" cols="50" rows="10">Why are you taking so much time man.</textarea>
+            <button id='analyze'>Analyze</button>
+        </p>
+
+        <p id="score_result"></p>
+        <p id="comparative"></p>
+        <p id="negative"></p>
+        <p id="positive"></p>
+
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+		<script src="js/sketch.js"></script>
+	</body>
+</html>
